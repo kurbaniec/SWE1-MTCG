@@ -1,0 +1,3 @@
+[submodule "WebService"]
+	path = WebService
+	url = https://github.com/kurbaniec/WebServiceLib
