@@ -14,9 +14,10 @@ jobs:
       run:
         working-directory: WebService
     steps:
-    - uses: actions/checkout@v2
-    - with:
-        submodules: true
+    - name: Checkout repository and submodules
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -36,9 +37,10 @@ jobs:
         working-directory: MTCG
     needs: build_webservice
     steps:
-    - uses: actions/checkout@v2
-    - with:
-        submodules: true
+    - name: Checkout repository and submodules
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
